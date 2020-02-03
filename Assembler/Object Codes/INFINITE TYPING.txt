@@ -1,0 +1,7 @@
+#Program to type and output the characters immediately
+
+START SKI
+ BUN  START
+ INP
+ OUT
+ BUN  START

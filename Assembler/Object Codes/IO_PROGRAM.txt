@@ -1,0 +1,40 @@
+#Program to insert a string of characters into list, echo the inputs, and then prints all characters
+#Enter key terminates input
+#IO_PROGRAM
+
+START LDA  PTR
+ STA  PTR_SAVE
+ LDA  CRG
+ CMA  
+ INC  
+ STA  CRG
+LOOP SKI  
+ BUN  LOOP
+ INP  
+ OUT  
+ STA I PTR
+ LDA  PTR
+ STA  TMP
+ INC  
+ STA  PTR
+ LDA I TMP
+ ADD  CRG
+ SZA  
+ BUN  LOOP
+ LDA  PTR_SAVE
+ STA  PTR
+OUTPUT LDA I PTR
+ OUT  
+ LDA  PTR
+ INC  
+ STA  PTR
+ LDA I PTR
+ ADD  CRG
+ SZA  
+ BUN  OUTPUT
+ HLT  
+CRG HEX  000A
+PTR HEX  LIST
+PTR_SAVE HEX  0
+TMP HEX  0
+LIST HEX  0
