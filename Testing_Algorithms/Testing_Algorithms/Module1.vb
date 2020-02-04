@@ -1,7 +1,9 @@
 ﻿Module Module1
     Sub Main()
 
-        Handle_2s_Complement()
+        'Handle_2s_Complement()
+        ExponentMultiplication()
+
 
     End Sub
 
@@ -18,4 +20,20 @@
 
         Console.ReadKey()
     End Sub
+
+    Sub ExponentMultiplication()
+
+        Dim b As Integer = Console.ReadLine()
+        Dim e As Integer = Console.ReadLine()
+        Dim p As Integer = 1
+
+        While e <> 0
+            p = p * b
+            e -= 1
+        End While
+
+        Console.WriteLine(p)
+
+    End Sub
+
 End Module
